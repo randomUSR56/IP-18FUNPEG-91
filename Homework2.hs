@@ -29,4 +29,4 @@ deleteIf c False = c
 -- viszont ha a fentebbi fuggvenyekben (xor3 es exactlyOneTrue) '_' helyett
 -- barmi egyebet hasznaltam volna akkor is mukodne a kod (mert sehol sincs hasznalva a torzsben)
 -- de adna egy warningo, hogy vannak nem hasznalt valtozoim.
--- szemantikailag valoban jobb ha a wildcard tenyleg wildcard '_'
+-- stilisztikailag valoban jobb ha a wildcard tenyleg wildcard '_'
