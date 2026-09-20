@@ -28,5 +28,5 @@ deleteIf c False = c
 -- ebbol kovetkezik a masik dolog: a '_' karakter eldobja az erteket, nem tortenik binding.
 -- viszont ha a fentebbi fuggvenyekben (xor3 es exactlyOneTrue) '_' helyett
 -- barmi egyebet hasznaltam volna akkor is mukodne a kod (mert sehol sincs hasznalva a torzsben)
--- de adna egy warningo, hogy vannak nem hasznalt valtozoim.
+-- de adna egy warningot, hogy vannak nem hasznalt valtozoim.
 -- stilisztikailag valoban jobb ha a wildcard tenyleg wildcard '_'
