@@ -31,3 +31,10 @@ sumOfDivisors x -- x: szam aminek szeretnem az osztoinak osszeget
             | (b == 0) = 0
             | (x `mod` b /= 0) = sumDivisorsUpTo (b-1)
             | otherwise = b + sumDivisorsUpTo (b-1)
+
+-- fibonacci
+fibonacci :: Integer -> Integer
+fibonacci n
+    | (n == 0) = 0
+    | (n == 1) = 1
+    | otherwise = fibonacci(n-1) + fibonacci (n-2)
