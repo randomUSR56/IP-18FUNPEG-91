@@ -30,3 +30,9 @@ numOfOcc _ [] = 0
 numOfOcc y (x:xs)
     | (y /= x) = (numOfOcc y xs) + 0
     | otherwise = (numOfOcc y xs) + 1
+
+elimElem :: Eq a => a -> [a] -> [a]
+elimElem _ [] = []
+elimElem y (x:xs)
+    | (y == x) = elimElem y xs
+    | otherwise = x: elimElem y xs
