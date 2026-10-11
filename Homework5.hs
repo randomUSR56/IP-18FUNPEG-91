@@ -35,4 +35,4 @@ elimElem :: Eq a => a -> [a] -> [a]
 elimElem _ [] = []
 elimElem y (x:xs)
     | (y == x) = elimElem y xs
-    | otherwise = x: elimElem y xs
+    | otherwise = x : elimElem y xs
