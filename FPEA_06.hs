@@ -46,4 +46,4 @@ eqList _ _ = False
 
 inits' :: [a] -> [[a]]
 inits' [] = [] : [] -- [[]]
-inits' (x:xs) = [] :
+-- inits' (x:xs) = [] :
