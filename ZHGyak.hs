@@ -23,3 +23,10 @@ areSameParity (a, b, c)
     | ((a `mod` 2 == 0) && (b `mod` 2 == 0) && (c `mod` 2 == 0)) = True
     | ((a `mod` 2 /= 0) && (b `mod` 2 /= 0) && (c `mod` 2 /= 0)) = True
     | otherwise = False
+
+selectElems :: [a] -> [Bool] -> [a]
+selectElems [] _ = []
+selectElems _ [] = []
+selectElems (x:xs) (y:ys)
+    | (y) = x:selectElems xs ys
+    | otherwise = selectElems xs ys
