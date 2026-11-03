@@ -17,3 +17,9 @@ compressLetters (x:y:xs)
     | x == y && isLower x = toUpper x : compressLetters xs
     | otherwise           = x : compressLetters (y:xs)
 compressLetters xs = xs
+
+areSameParity :: Integral a => (a, a, a) -> Bool
+areSameParity (a, b, c)
+    | ((a `mod` 2 == 0) && (b `mod` 2 == 0) && (c `mod` 2 == 0)) = True
+    | ((a `mod` 2 /= 0) && (b `mod` 2 /= 0) && (c `mod` 2 /= 0)) = True
+    | otherwise = False
