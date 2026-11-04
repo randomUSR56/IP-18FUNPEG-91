@@ -30,3 +30,8 @@ selectElems _ [] = []
 selectElems (x:xs) (y:ys)
     | (y) = x:selectElems xs ys
     | otherwise = selectElems xs ys
+
+haveAtLeastTwoAndThreeElems :: ([a], [b]) -> Bool
+haveAtLeastTwoAndThreeElems (_:_:xs, _:_:_:ys) = True
+haveAtLeastTwoAndThreeElems (_:_:_:xs, _:_:ys) = True
+haveAtLeastTwoAndThreeElems _ = False
