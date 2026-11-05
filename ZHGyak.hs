@@ -35,3 +35,7 @@ haveAtLeastTwoAndThreeElems :: ([a], [b]) -> Bool
 haveAtLeastTwoAndThreeElems (_:_:xs, _:_:_:ys) = True
 haveAtLeastTwoAndThreeElems (_:_:_:xs, _:_:ys) = True
 haveAtLeastTwoAndThreeElems _ = False
+
+sumProduct :: Num a => [a] -> [a] -> a
+sumProduct (x:xs) (y:ys) = x*y + sumProduct xs ys
+sumProduct _ _ = 0
