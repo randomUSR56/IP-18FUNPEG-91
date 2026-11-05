@@ -39,3 +39,25 @@ haveAtLeastTwoAndThreeElems _ = False
 sumProduct :: Num a => [a] -> [a] -> a
 sumProduct (x:xs) (y:ys) = x*y + sumProduct xs ys
 sumProduct _ _ = 0
+
+sphereVolume :: (Floating a, Ord a) => a -> a
+sphereVolume r
+    | r<=0 = 0
+    | otherwise = (4/3)*(pi)*(r^3)
+
+collatzFn :: Integral a => a -> a
+collatzFn x
+    | (x `mod` 2 /= 0) = (x*3)+1
+    | otherwise = x `div` 2
+
+sumNeighbours :: Num a => [a] -> [a]
+sumNeighbours [] = []
+sumNeighbours (x:[]) = []
+sumNeighbours (x:y:[]) = (x+y):[]
+sumNeighbours (x:y:xs) = (x+y):sumNeighbours (y:xs)
+
+max3 :: Ord a => (a, a, a) -> a
+max3 (a, b, c)
+    | a >= b && a >= c = a
+    | b >= c = b
+    | otherwise = c
